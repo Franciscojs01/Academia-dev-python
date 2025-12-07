@@ -2,7 +2,7 @@
 
 Sistema web completo para gerenciamento de **alunos, cursos e matrículas**, desenvolvido para o desafio técnico **Academia Dev Python – Estágio 2026.1**.
 
-Inclui backend em **Django + Django REST Framework**, templates HTML, autenticação, API RESTful, relatórios SQL brutos e ambiente totalmente **Dockerizado**.
+Inclui backend em **Django + Django REST Framework**, templates HTML, autenticação, API RESTful, relatórios SQL brutos e ambiente em Docker
 
 ---
 
