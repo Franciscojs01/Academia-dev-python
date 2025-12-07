@@ -8,7 +8,9 @@ services:
       - postgres_data:/var/lib/postgresql/data
 
   web:
-    build: .
+    build:
+      context: .
+      dockerfile: Dockerfile
     command: >
       sh -c "
       python manage.py migrate &&
