@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Histórico do Aluno</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 { color: #333; }
+
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+            margin-bottom: 25px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        th, td {
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+            text-align: left;
+        }
+
+        th {
+            background: #eee;
+        }
+
+        .pago { color: green; font-weight: bold; }
+        .pendente { color: red; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <h1>Histórico do Aluno</h1>
+
+    <div class="card">
+        <h2>Dados do Aluno</h2>
+        <p><strong>Nome:</strong> {{ aluno.nome }}</p>
+        <p><strong>Email:</strong> {{ aluno.email }}</p>
+        <p><strong>CPF:</strong> {{ aluno.cpf }}</p>
+        <p><strong>Data de ingresso:</strong> {{ aluno.data_ingresso }}</p>
+    </div>
+
+    <div class="card">
+        <h2>Matrículas</h2>
+
+        {% if matriculas %}
+            <table>
+                <tr>
+                    <th>Curso</th>
+                    <th>Data</th>
+                    <th>Valor</th>
+                    <th>Status Pagamento</th>
+                </tr>
+
+                {% for m in matriculas %}
+                    <tr>
+                        <td>{{ m.curso.nome }}</td>
+                        <td>{{ m.data }}</td>
+                        <td>R$ {{ m.valor }}</td>
+                        <td>
+                            {% if m.status_pagamento == "pago" %}
+                                <span class="pago">Pago</span>
+                            {% else %}
+                                <span class="pendente">Pendente</span>
+                            {% endif %}
+                        </td>
+                    </tr>
+                {% endfor %}
+            </table>
+        {% else %}
+            <p>Este aluno ainda não possui matrículas.</p>
+        {% endif %}
+    </div>
+
+</body>
+</html>

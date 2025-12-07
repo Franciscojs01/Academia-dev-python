@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourcePerFileMappings">
+    <file url="file://$PROJECT_DIR$/apps/academia/views.py" value="0c2f53e0-04bc-4ffc-bd1a-6912599d70d9" />
+    <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/0c2f53e0-04bc-4ffc-bd1a-6912599d70d9/console.sql" value="0c2f53e0-04bc-4ffc-bd1a-6912599d70d9" />
+    <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/0c2f53e0-04bc-4ffc-bd1a-6912599d70d9/console_1.sql" value="0c2f53e0-04bc-4ffc-bd1a-6912599d70d9" />
+  </component>
+</project>
